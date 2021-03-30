@@ -17,6 +17,9 @@ import HeaderRight from "../components/HeaderRight";
 import ChatRoom from "../screens/ChatRoom";
 import HeaderLeftChatRoom from "../components/HeaderLeftChatRoom";
 import HeaderRightChatRoom from "../components/HeaderRightChatRoom";
+import NewChatList from "../screens/NewChatList";
+import HeaderLeftContactList from "../components/HeaderLeftContactList";
+import HeaderRightContactList from "../components/HeaderRightContactList";
 // If you are not familiar with React Navigation, we recommend going through the
 // "Fundamentals" guide: https://reactnavigation.org/docs/getting-started
 export default function Navigation({
@@ -76,6 +79,15 @@ function RootNavigator() {
           ),
           headerTitle: () => null,
           headerRight: () => <HeaderRightChatRoom />,
+        })}
+      />
+      <Stack.Screen
+        name="ContactList"
+        component={NewChatList}
+        options={({ route }) => ({
+          headerLeft: () => <HeaderLeftContactList />,
+          headerTitle: () => null,
+          headerRight: () => <HeaderRightContactList />,
         })}
       />
       <Stack.Screen

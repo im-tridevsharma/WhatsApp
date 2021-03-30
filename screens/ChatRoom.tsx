@@ -1,17 +1,23 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, ImageBackground } from "react-native";
 
 import ChatBox from "../components/ChatBox";
+import bg from "../assets/images/bg.jpg";
 
 export default function ChatRoom() {
   return (
-    <View
-      style={{
-        backgroundColor: "#ECE5DD",
-        flex: 1,
-      }}
+    <ImageBackground
+      source={bg}
+      resizeMode="cover"
+      style={{ width: "100%", height: "100%" }}
     >
-      <ChatBox />
-    </View>
+      <View
+        style={{
+          flex: 1,
+        }}
+      >
+        <ChatBox />
+      </View>
+    </ImageBackground>
   );
 }

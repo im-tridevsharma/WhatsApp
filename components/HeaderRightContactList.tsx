@@ -6,7 +6,7 @@ import Colors from "../constants/Colors";
 import { Octicons } from "@expo/vector-icons";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
-export default function HeaderRight() {
+export default function HeaderRightContactList() {
   const colorScheme = useColorScheme();
   return (
     <View
